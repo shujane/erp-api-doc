@@ -10,7 +10,7 @@ User should only create one account if they do not have multiple clients
 
 **Method:** `POST`
 
-**End Point:** `http://{server url}/v1/accounts`
+**End Point:** `http://{server url}api/v1/accounts`
 
 **Request Data:**
 ```json

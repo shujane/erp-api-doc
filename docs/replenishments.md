@@ -67,7 +67,14 @@ Lists all Replenishmenet bill that is in Liftians ERP system.
 
 **End Point:** `http://{server url}/api/v1/receive?orderNo=552195`
 
-**Response Data:**
+
+**Response Code**
+
+|   Code  | Description   |
+| :-----: | ------------- |
+| `200`   | success       |
+| `400`   | Invalid param |
+
 ```json
 {
     "msgId": null,
@@ -146,12 +153,6 @@ Lists all Replenishmenet bill that is in Liftians ERP system.
    
 ```
 
-**Response Code**
-
-|   Code  | Description   |
-| :-----: | ------------- |
-| `200`   | success       |
-| `400`   | Invalid param |
 
 # Cancel receive order
 
@@ -163,7 +164,12 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 
 **End Point:** `http://{server url}/api/v1/cancel/receive?orderNo=552195`
 
-**Request Data:**
+**Response Code**
+
+|   Code  | Description   |
+| :-----: | ------------- |
+| `200`   | success       |
+
 ```json
 {
     "msgId": null,
@@ -181,10 +187,82 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 }
 ```
 
-**PK: (accountNo,requestNo)**
+
+# Update receive order
+
+This endpoint can be used to update order
+
+NOTE: **The task can be canceled before being assigned to the AGV.
+
+**Method:** `Post`
+
+**End Point:** `http://{server url}/api/v1/update/receive`
+**Request Data:**
+```json
+{
+	"accountNo": 100,
+	"requestNo": "552195",
+	"priority": 1,
+	"receiveDate": "2019-06-24T12:08:27",
+	"createDate": "2019-06-24T12:08:27",
+	"modifyDate": "2019-06-24T12:08:27",
+	"items": [{
+		"itemId": "39126",
+		"sku": "3588US3-BK",
+		"name": "Orico 3588US3-BK 3.5 USB3.0 SATA HDD External Enclosure Black",
+		"lotNo": "552193",
+		"caseNbr": 1,
+		"unitNum": 1,
+		"quantity": "1"
+	}, {
+		"itemId": "40310",
+		"sku": "L95SS",
+		"name": "Orico Aluminium L95SS Laptop CD-ROM Bay Drive Bracket For 2.5 SATA Drive ",
+		"lotNo": "5522",
+		"caseNbr": 1,
+		"unitNum": 1,
+		"quantity": "2"
+	}, {
+		"itemId": "44045",
+		"sku": "ORC-7688C3-BK",
+		"name": "Orico Black Aluminium 7688C3 3.5\" Type-C External Hard Drive Enclosure",
+		"lotNo": "552234",
+		"caseNbr": 1,
+		"unitNum": 1,
+		"quantity": "1"
+	}, {
+		"itemId": "45393",
+		"sku": "ORC-BTA-402-BK",
+		"name": "Orico Black BTA-402 USB Bluetooth 4.0 Adapter",
+		"lotNo": "552277",
+		"caseNbr": 1,
+		"unitNum": 1,
+		"quantity": "1"
+	}]
+}
+
+
+```
 
 **Response Code**
 
 |   Code  | Description   |
 | :-----: | ------------- |
 | `200`   | success       |
+
+```json
+{
+    "msgId": null,
+    "result": "3",
+    "data": "The current state does not allow this operation",
+    "messageType": null
+}
+```
+```json
+{
+    "msgId": null,
+    "result": "1",
+    "data": "Success",
+    "messageType": null
+}
+```

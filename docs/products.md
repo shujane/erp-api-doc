@@ -54,76 +54,39 @@ NOTE: **Any duplicate SKU record will be replaced by the later added record.**
 **With Parameter**
 
 ```
-/products?Id={productId}
+/product?Id={productId}
 &accountNo={accountNo}
 ```
 
 **Response Data:**
-
-Object of Product
-
+```json
+{
+    "msgId": null,
+    "result": "1",
+    "data": {
+        "uniqueId": null,
+        "id": 47984,
+        "accountNo": 100,
+        "sku": "AK-K7012-IL",
+        "name": "AKRacing K7012 Gaming Chair Purple",
+        "barcode": "XXX47984",
+        "length": 400.0,
+        "width": 700.0,
+        "height": 900.0,
+        "weight": 28.0,
+        "unitVolume": 0.01,
+        "active": true,
+        "productImgUrl": "",
+        "packageImgUrl": "",
+        "createDate": "2019-07-15 15:31:21",
+        "modifyDate": "2019-07-15 15:31:21"
+    },
+    "messageType": null
+}
+```
 **Response Code**
 
 |   Code  | Description   |
 | :-----: | ------------- |
 | `200`   | Success       |
 | `404`   | Product Not Found |
-
-
-
-# Get List of Products w/ parameter
-
-Lists all products that is in Liftians ERP system.
-
-Default page size is 20 and page number is 1.
-
-**Method:** `GET`
-
-**End Point:** `http://{server url}/v1/products`
-
-
-**Response Data:**
-```json
-{
-  "products": [
-    {
-      "productId":"2111",
-      "accountNo":100,
-      "sku":"AH-780-BLACK",
-      "name":"Amour Home Diffuser Black Humidifier",
-      "barcode":"A293EEH5",
-      "length":3,
-      "width":5,
-      "height":3,
-      "weight":10,
-      "unitVolume":0.01,
-      "active": true,
-      "productImgUrl": "https://google.com",
-      "packageImgUrl": "https://liftians.com",
-      "createDate":"2017-08-21T08:32:22.443",
-      "modifyDate":"2017-08-21T08:32:22.443"
-    },
-    ...
-  ],
-  "total": 3,
-  "page": 1,
-  "pages": 1
-}
-```
-**With Parameter**
-
-```
-/products?pageSize={pageSize}
-&pageNum={pageNum}
-&accountNo={accountNo}
-&active={active}
-&createDate={createDate}
-&modifyDate={modifyDate}
-```
-
-**Response Code**
-
-|   Code  | Description   |
-| :-----: | ------------- |
-| `200`   | Success       |
-| `400`   | Invalid param |

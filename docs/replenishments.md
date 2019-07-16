@@ -152,3 +152,30 @@ Lists all Replenishmenet bill that is in Liftians ERP system.
 | :-----: | ------------- |
 | `200`   | success       |
 | `400`   | Invalid param |
+
+# Cancel receive order
+
+This endpoint can be used to cancel order
+
+NOTE: **The task can be canceled before being assigned to the AGV.
+
+**Method:** `GET`
+
+**End Point:** `http://{server url}/api/v1/cancel/receive?orderNo=552195`
+
+**Request Data:**
+```json
+{
+    "msgId": null,
+    "result": "3",
+    "data": "The current state does not allow this operation",
+    "messageType": null
+}
+```
+**PK: (accountNo,requestNo)**
+
+**Response Code**
+
+|   Code  | Description   |
+| :-----: | ------------- |
+| `200`   | success       |

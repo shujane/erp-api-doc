@@ -10,7 +10,7 @@ This endpoint can be used to create or update multiple orders in one request.
 
 **Method:** `POST`
 
-**End Point:** `http://{server url}/v1/orders`
+**End Point:** `http://{server url}/api/v1/delivery`
 
 **Request Data:**
 ```json
@@ -62,7 +62,7 @@ Default page size is 20 and page number is 1.
 
 **Method:** `GET`
 
-**End Point:** `http://{server url}/v1/orders`
+**End Point:** `http://{server url}/api/v1/delivery?`
 
 **Response Data:**
 ```json

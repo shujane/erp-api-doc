@@ -65,25 +65,52 @@ Lists all orders that is in Liftians ERP system.
 
 **Response Data:**
 ```json
-{
+
+ {
     "msgId": null,
     "result": "1",
     "data": {
-        "id": 4113822,
+        "id": 4113760,
         "accountNo": 100,
-        "orderNo": "4113822",
+        "orderNo": "4113760",
         "priority": 2,
         "orderStatus": "awaiting_shipment",
-        "orderDate": "2019-07-15 00:00:00",
-        "createDate": "2019-07-15 15:35:57",
-        "modifyDate": "2019-07-15 15:35:57",
+        "orderDate": "2019-06-19 00:00:00",
+        "createDate": "2019-06-24 12:03:08",
+        "modifyDate": "2019-06-24 12:03:08",
         "items": [
             {
-                "itemId": 47984,
+                "itemId": 41011,
                 "lineItemKey": null,
-                "orderId": "4113822",
-                "sku": "AK-K7012-IL",
-                "name": "AKRacing K7012 Gaming Chair Purple",
+                "orderId": "4113760",
+                "sku": "ORC-BTA-402-BK",
+                "name": "Audio-Technica ATH-DSR9BT Wireless Over-Ear Headphones",
+                "quantity": 1,
+                "unitNum": 1,
+                "processStatus": null,
+                "pickedQty": null,
+                "lotNo": null,
+                "updateTime": null
+            },
+            {
+                "itemId": 41015,
+                "lineItemKey": null,
+                "orderId": "4113760",
+                "sku": "HDWD120UZSVA",
+                "name": "Toshiba P300 2TB 7200RPM 64MB 3.5in SATA Hard Drive",
+                "quantity": 1,
+                "unitNum": 1,
+                "processStatus": null,
+                "pickedQty": null,
+                "lotNo": null,
+                "updateTime": null
+            },
+            {
+                "itemId": 40310,
+                "lineItemKey": null,
+                "orderId": "4113760",
+                "sku": "BD717673",
+                "name": "Beyerdynamic Impacto Universal DAC/ AMP for iPhone/ Android",
                 "quantity": 1,
                 "unitNum": 1,
                 "processStatus": null,

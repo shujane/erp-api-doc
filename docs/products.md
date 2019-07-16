@@ -49,14 +49,7 @@ NOTE: **Any duplicate SKU record will be replaced by the later added record.**
 
 **Method:** `GET`
 
-**End Point:** `http://{server url}/api/v1/product`
-
-**With Parameter**
-
-```
-/product?Id={productId}
-&accountNo={accountNo}
-```
+**End Point:** `http://{server url}/api/v1/product?id=47984`
 
 **Response Data:**
 ```json

@@ -172,6 +172,15 @@ NOTE: **The task can be canceled before being assigned to the AGV.
     "messageType": null
 }
 ```
+```json
+{
+    "msgId": null,
+    "result": "1",
+    "data": "Success",
+    "messageType": null
+}
+```
+
 **PK: (accountNo,requestNo)**
 
 **Response Code**

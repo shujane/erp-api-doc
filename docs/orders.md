@@ -62,8 +62,13 @@ Lists all orders that is in Liftians ERP system.
 **Method:** `GET`
 
 **End Point:** `http://{server url}/api/v1/delivery?orderNo=4113822`
+**Response Code**
 
-**Response Data:**
+|   Code  | Description   |
+| :-----: | ------------- |
+| `200`   | Success       |
+| `400`   | Invalid param |
+
 ```json
 
  {
@@ -124,12 +129,6 @@ Lists all orders that is in Liftians ERP system.
 }
 
 ```
-**Response Code**
-
-|   Code  | Description   |
-| :-----: | ------------- |
-| `200`   | Success       |
-| `400`   | Invalid param |
 
 # Cancel receive order
 
@@ -141,7 +140,14 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 
 **End Point:** `http://{server url}/api/v1/cancel/delivery?orderNo=552195`
 
-**Request Data:**
+**PK: (accountNo,requestNo)**
+
+**Response Code**
+
+|   Code  | Description   |
+| :-----: | ------------- |
+| `200`   | success       |
+
 ```json
 {
     "msgId": null,
@@ -159,6 +165,50 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 }
 ```
 
+
+
+# Update receive order
+
+This endpoint can be used to update order
+
+NOTE: **The task can be canceled before being assigned to the AGV.
+
+**Method:** `Post`
+
+**End Point:** `http://{server url}/api/v1/update/delivery`
+
+**Request Data:**
+```json
+{
+	"accountNo": 100,
+	"orderNo": "4113760",
+	"priority": 3,
+	"orderStatus": "0",
+	"orderDate": "2019-06-19T00:00:00",
+	"createDate": "2019-06-24T12:03:08",
+	"modifyDate": "2019-06-24T12:03:08",
+	"items": [{
+		"lineItemKey": "41011",
+		"sku": "ORC-BTA-402-BK",
+		"name": "Audio-Technica ATH-DSR9BT Wireless Over-Ear Headphones",
+		"unitNum": 1,
+		"quantity": "1"
+	}, {
+		"lineItemKey": "41015",
+		"sku": "HDWD120UZSVA",
+		"name": "Toshiba P300 2TB 7200RPM 64MB 3.5in SATA Hard Drive",
+		"unitNum": 1,
+		"quantity": "1"
+	}, {
+		"lineItemKey": "40310",
+		"sku": "BD717673",
+		"name": "Beyerdynamic Impacto Universal DAC\/ AMP for iPhone\/ Android",
+		"unitNum": 1,
+		"quantity": "1"
+	}]
+}
+```
+
 **PK: (accountNo,requestNo)**
 
 **Response Code**
@@ -166,3 +216,12 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 |   Code  | Description   |
 | :-----: | ------------- |
 | `200`   | success       |
+
+```json
+{
+    "msgId": null,
+    "result": null,
+    "data": "UPDATE_ERROR",
+    "messageType": null
+}
+```

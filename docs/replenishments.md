@@ -32,7 +32,7 @@ NOTE: **All items being pushed MUST also be in Liftians' ERP system**. Otherwise
         "lotNo": "20180101", 
         "productDate": "2016-04-21T00:00:00",
         "expiredDate": "2022-04-22T00:00:00",
-        "caseNbr": "124325",
+        "caseNbr": ["33","333"],
         "unitNum": 1,
         "quantity": 100
       }, {
@@ -98,7 +98,7 @@ Lists all Replenishmenet bill that is in Liftians ERP system.
                 "lotNo": "552193",
                 "productDate": null,
                 "expiredDate": null,
-                "caseNbr": "1",
+                "caseNbr": ["33","333"],
                 "unitNum": 1,
                 "quantity": 1,
                 "processStatus": null,
@@ -112,37 +112,9 @@ Lists all Replenishmenet bill that is in Liftians ERP system.
                 "lotNo": "5522",
                 "productDate": null,
                 "expiredDate": null,
-                "caseNbr": "1",
+                "caseNbr": ["33","333"],
                 "unitNum": 1,
                 "quantity": 2,
-                "processStatus": null,
-                "updateTime": null
-            },
-            {
-                "itemId": "44045",
-                "orderId": "552195",
-                "sku": "ORC-7688C3-BK",
-                "name": "Orico Black Aluminium 7688C3 3.5\" Type-C External Hard Drive Enclosure",
-                "lotNo": "552234",
-                "productDate": null,
-                "expiredDate": null,
-                "caseNbr": "1",
-                "unitNum": 1,
-                "quantity": 1,
-                "processStatus": null,
-                "updateTime": null
-            },
-            {
-                "itemId": "45393",
-                "orderId": "552195",
-                "sku": "ORC-BTA-402-BK",
-                "name": "Orico Black BTA-402 USB Bluetooth 4.0 Adapter",
-                "lotNo": "552277",
-                "productDate": null,
-                "expiredDate": null,
-                "caseNbr": "1",
-                "unitNum": 1,
-                "quantity": 1,
                 "processStatus": null,
                 "updateTime": null
             }
@@ -211,7 +183,7 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 		"sku": "3588US3-BK",
 		"name": "Orico 3588US3-BK 3.5 USB3.0 SATA HDD External Enclosure Black",
 		"lotNo": "552193",
-		"caseNbr": 1,
+		"caseNbr":["33","333"],
 		"unitNum": 1,
 		"quantity": "1"
 	}, {
@@ -219,25 +191,9 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 		"sku": "L95SS",
 		"name": "Orico Aluminium L95SS Laptop CD-ROM Bay Drive Bracket For 2.5 SATA Drive ",
 		"lotNo": "5522",
-		"caseNbr": 1,
+		"caseNbr": ["33","333"],
 		"unitNum": 1,
 		"quantity": "2"
-	}, {
-		"itemId": "44045",
-		"sku": "ORC-7688C3-BK",
-		"name": "Orico Black Aluminium 7688C3 3.5\" Type-C External Hard Drive Enclosure",
-		"lotNo": "552234",
-		"caseNbr": 1,
-		"unitNum": 1,
-		"quantity": "1"
-	}, {
-		"itemId": "45393",
-		"sku": "ORC-BTA-402-BK",
-		"name": "Orico Black BTA-402 USB Bluetooth 4.0 Adapter",
-		"lotNo": "552277",
-		"caseNbr": 1,
-		"unitNum": 1,
-		"quantity": "1"
 	}]
 }
 

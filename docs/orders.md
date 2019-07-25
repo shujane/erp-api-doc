@@ -165,6 +165,30 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 }
 ```
 
+# resume receive order
+
+This endpoint can be used to resume order
+
+**Method:** `GET`
+
+**End Point:** `http://{server url}/api/v1/resume/delivery?orderNo=552195`
+
+**PK: (accountNo,requestNo)**
+
+**Response Code**
+
+|   Code  | Description   |
+| :-----: | ------------- |
+| `200`   | success       |
+
+```json
+{
+    "msgId": null,
+    "result": "1",
+    "data": "Success",
+    "messageType": null
+}
+```
 
 
 # Update receive order

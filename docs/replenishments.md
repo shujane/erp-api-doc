@@ -100,6 +100,7 @@ Lists all Replenishmenet bill that is in Liftians ERP system.
                 "sku": "3588US3-BK",
                 "name": "Orico 3588US3-BK 3.5 USB3.0 SATA HDD External Enclosure Black",
                 "lotNo": "552193",
+		"locationCode":"D8V231432543",
                 "productDate": null,
                 "expiredDate": null,
                 "caseNbr": ["33","333"],
@@ -115,6 +116,7 @@ Lists all Replenishmenet bill that is in Liftians ERP system.
                 "name": "Orico Aluminium L95SS Laptop CD-ROM Bay Drive Bracket For 2.5 SATA Drive ",
                 "lotNo": "5522",
                 "productDate": null,
+		"locationCode":"D8V231432543",
                 "expiredDate": null,
                 "caseNbr": ["33","333"],
                 "unitNum": 1,
@@ -212,6 +214,7 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 		"sku": "3588US3-BK",
 		"name": "Orico 3588US3-BK 3.5 USB3.0 SATA HDD External Enclosure Black",
 		"lotNo": "552193",
+		"locationCode":"D8V231432543",
 		"caseNbr":["33","333"],
 		"unitNum": 1,
 		"quantity": "1"
@@ -220,6 +223,7 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 		"sku": "L95SS",
 		"name": "Orico Aluminium L95SS Laptop CD-ROM Bay Drive Bracket For 2.5 SATA Drive ",
 		"lotNo": "5522",
+		"locationCode":"D8V231432543",
 		"caseNbr": ["33","333"],
 		"unitNum": 1,
 		"quantity": "2"

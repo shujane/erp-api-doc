@@ -34,7 +34,7 @@ NOTE: **All items being pushed MUST also be in Liftians' ERP system**. Otherwise
 	"locationCode":"D8V231432543",
         "productDate": "2016-04-21T00:00:00",
         "expiredDate": "2022-04-22T00:00:00",
-	"area": 1, // 0: 任意区域, 
+	"area": 1,  
         "caseNbr": ["33","333"],
         "unitNum": 1,
         "quantity": 100

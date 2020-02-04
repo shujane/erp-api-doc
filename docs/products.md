@@ -6,7 +6,7 @@ All the items in the orders must be added into the product table.
 
 # Push Multiple Products
 
-NOTE: **Any duplicate SKU record will be replaced by the later added record.**
+NOTE: **Any duplicate SKU,appId,productId record will be replaced by the later added record.**
 
 **Method:** `POST`
 
@@ -46,7 +46,7 @@ NOTE: **Any duplicate SKU record will be replaced by the later added record.**
 | `201`   | created       |
 
 
-# Get Product by productId and accountNo
+# Get Product by productId and appId
 
 **Method:** `GET`
 

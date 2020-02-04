@@ -14,16 +14,18 @@ User should only create one account if they do not have multiple clients
 
 **Request Data:**
 ```json
-[
-  {
-    "accountNo": 100,
-    "accountName": "Assembly",
-    "description": "Assembly Whiplash",
-    "active": true,
-    "createDate": "2018-06-17T11:16:24.227",
-    "modifyDate": "2018-06-17T11:16:24.327"
-  },
-  ...
+[{
+		"appId": 100,
+		"userId": 100,
+		"userNumber": "Assembly",
+		"nickName": "Assembly",
+		"password": "2333433",
+		"userCard": "3243432A",
+		"stat": 1,
+		"createTime": "1580782707928",
+		"updateTime": "1580782707928"
+	},
+	...
 ]
 ```
 **PK: accountNo**
@@ -44,14 +46,17 @@ User should only create one account if they do not have multiple clients
 **Response Data:**
 ```json
 [
-  {
-    "accountNo": 100,
-    "accountName": "CINDER",
-    "description": "",
-    "active": true,
-    "createDate": "2018-06-17T11:16:24.227",
-    "modifyDate": "2018-06-17T11:16:24.327"
-  },
+ {
+		"appId": 100,
+		"userId": 100,
+		"userNumber": "Assembly",
+		"nickName": "Assembly",
+		"password": "2333433",
+		"userCard": "3243432A",
+		"stat": 1,
+		"createTime": "1580782707928",
+		"updateTime": "1580782707928"
+	},
   ...
 ]
 ```
@@ -59,7 +64,7 @@ User should only create one account if they do not have multiple clients
 **With Parameter**
 
 ```
-/accounts?accountNo={accountNo}
+/accounts?userId={userId}&appId={appId}
 ```
 
 **Response Code**

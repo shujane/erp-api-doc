@@ -17,7 +17,8 @@ NOTE: **Any duplicate SKU record will be replaced by the later added record.**
 [
   {
     "productId":"2111",
-    "accountNo":100,
+    "appId":100,
+    "wareHouseId":100,
     "sku":"AH-780-BLACK",
     "name":"Amour Home Diffuser Black Humidifier",
     "barcode":"A293EEH5",
@@ -49,32 +50,32 @@ NOTE: **Any duplicate SKU record will be replaced by the later added record.**
 
 **Method:** `GET`
 
-**End Point:** `http://{server url}/api/v1/product?id=47984`
+**End Point:** `http://{server url}/api/v1/product?appId=47984&productId=12123`
 
 **Response Data:**
 ```json
 {
-    "msgId": null,
-    "result": "1",
-    "data": {
-        "uniqueId": null,
-        "id": 47984,
-        "accountNo": 100,
-        "sku": "AK-K7012-IL",
-        "name": "AKRacing K7012 Gaming Chair Purple",
-        "barcode": "XXX47984",
-        "length": 400.0,
-        "width": 700.0,
-        "height": 900.0,
-        "weight": 28.0,
-        "unitVolume": 0.01,
-        "active": true,
-        "productImgUrl": "",
-        "packageImgUrl": "",
-        "createDate": "2019-07-15 15:31:21",
-        "modifyDate": "2019-07-15 15:31:21"
-    },
-    "messageType": null
+	"msgId": null,
+	"result": "1",
+	"data": {
+		"productId": "2111",
+		"appId": 100,
+		"wareHouseId": 100,
+		"sku": "AH-780-BLACK",
+		"name": "Amour Home Diffuser Black Humidifier",
+		"barcode": "A293EEH5",
+		"length": 3,
+		"width": 5,
+		"height": 3,
+		"weight": 10,
+		"unitVolume": 0.01,
+		"active": true,
+		"productImgUrl": "https://google.com",
+		"packageImgUrl": "https://liftians.com",
+		"createDate": "2017-08-21T08:32:22.443",
+		"modifyDate": "2017-08-21T08:32:22.443"
+	},
+	"messageType": null
 }
 ```
 **Response Code**

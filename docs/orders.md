@@ -14,45 +14,38 @@ This endpoint can be used to create or update multiple orders in one request.
 
 **Request Data:**
 ```json
-[
-  {
-    "accountNo": 100,
-    "orderNo": "CINDER4999",
-    "priority": 2,
-    "orderStatus": "awaiting_shipment",
-    "orderDate": "2017-04-22 09:15:18",
-    "createDate": "2017-04-22 09:15:18",
-    "modifyDate": "2017-04-22 09:15:18",
-    "items": [
-      {
-        "lineItemKey": "129193912",
-        "sku": "WAF1200",
-        "name": "Removable Cooking Plates - Accessory - Waffle",
-        "unitNum": 1,
-        "quantity": 1
-      },
-      {
-        "lineItemKey": "129193913",
-        "sku": "WAF1201",
-        "name": "Removable Cooking Plates - Accessory - Pancake",
-        "unitNum": 1,
-        "quantity": 3
-      }
-    ]
-  },
-  ...
-]
+[{
+
+	"appId": 100,
+	"orderNo": 4999,
+	"wareHouseId": "4999",
+	"priority": 2,
+	"orderStatus": "awaiting_shipment",
+	"orderDate": "2017-04-22 09:15:18",
+	"createDate": "2017-04-22 09:15:18",
+	"modifyDate": "2017-04-22 09:15:18",
+	"items": [{
+			"productId": "47902",
+			"sku": "WAF1200",
+			"name": "Removable Cooking Plates - Accessory - Waffle",
+			"unitNum": 1,
+			"quantity": 1
+		},
+		{
+			"productId": "47903",
+			"sku": "WAF1201",
+			"name": "Removable Cooking Plates - Accessory - Pancake",
+			"unitNum": 1,
+			"quantity": 3
+		}
+	]
+}]
 
 ```
 
-**PK: (accountNo,orderNo)**
+**PK: (appId,orderNo)**
 
-**Response Code**
 
-|   Code  | Description   |
-| :-----: | ------------- |
-| `201`   | Created       |
-| `400`   | Invalid JSON format |
 
 # Get List of Orders
 

@@ -44,6 +44,8 @@ This endpoint can be used to create or update multiple orders in one request.
 ```
 
 **PK: (appId,orderNo)**
+appId=100
+
 **Result Data:**
 ```json
 {

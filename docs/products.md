@@ -50,7 +50,7 @@ NOTE: **Any duplicate appId,productId record will be replaced by the later added
 
 **Method:** `GET`
 
-**End Point:** `http://{server url}/api/v1/product?appId=47984&productId=12123`
+**End Point:** `http://{server url}/api/v1/product?appId=100&productId=47902`
 
 **Response Data:**
 ```json

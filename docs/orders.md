@@ -44,8 +44,18 @@ This endpoint can be used to create or update multiple orders in one request.
 ```
 
 **PK: (appId,orderNo)**
-
-
+**Result Data:**
+```json
+{
+    "success": true,
+    "recordProcessed": 1,
+    "recordModified": -1,
+    "recordRejected": 0,
+    "startTime": 1580817115233,
+    "endTime": 1580817115247,
+    "desc": []
+}
+```
 
 # Get List of Orders
 

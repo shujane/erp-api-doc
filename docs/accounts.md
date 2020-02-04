@@ -41,7 +41,7 @@ User should only create one account if they do not have multiple clients
 
 **Method:** `GET`
 
-**End Point:** `http://{server url}/v1/accounts?appId=100&userId=100`
+**End Point:** `http://{server url}/v1/accounts?appId=100`
 
 **Response Data:**
 ```json
@@ -61,11 +61,31 @@ User should only create one account if they do not have multiple clients
 ]
 ```
 
-**With Parameter**
 
+
+# Get account of Accounts
+
+**Method:** `GET`
+
+**End Point:** `http://{server url}/v1/accounts?appId=100&userId=100`
+
+**Response Data:**
+```json
+{
+    "id": 1,
+    "appId": 100,
+    "userId": 100,
+    "userNumber": "Assembly",
+    "userName": null,
+    "nickName": "Assembly",
+    "password": "23334353",
+    "userCard": "3243432A",
+    "stat": 1,
+    "createTime": 1580782708000,
+    "updateTime": 1580782708000
+}
 ```
-/accounts?userId={userId}&appId={appId}
-```
+
 
 **Response Code**
 

@@ -41,7 +41,7 @@ User should only create one account if they do not have multiple clients
 
 **Method:** `GET`
 
-**End Point:** `http://{server url}/v1/accounts`
+**End Point:** `http://{server url}/v1/accounts?appId=100&userId=100`
 
 **Response Data:**
 ```json

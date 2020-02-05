@@ -16,43 +16,41 @@ NOTE: **All items being pushed MUST also be in Liftians' ERP system**. Otherwise
 
 **Request Data:**
 ```json
-[
-  {
-    "accountNo": 100,
-    "requestNo": "R1000",
-    "priority": 1,
-    "purchaseOrder":"232435454",
-    "receiveDate": "2018-09-22T16:15:18",
-    "createDate": "2017-04-22T09:15:18",
-    "modifyDate": "2017-04-22T09:15:18",
-    "items": [
-      {
-        "itemId": "129193912",
-        "sku": "WAF1200",
-        "name": "Removable Cooking Plates - Accessory - Waffle",
-        "lotNo": "20180101", 
-	"locationCode":"D8V231432543",
-        "productDate": "2016-04-21T00:00:00",
-        "expiredDate": "2022-04-22T00:00:00",
-	"area": 1,  
-        "caseNbr": ["33","333"],
-        "unitNum": 1,
-        "quantity": 100
-      }, {
-        "itemId": "129193913",
-        "sku": "WAF1201",
-        "name": "Removable Cooking Plates - Accessory - Pancake",
-        "lotNo": "20180101", 
-	"locationCode":"D8V231432543",
-        "productDate": "2016-04-21T00:00:00",
-        "expiredDate": "2022-04-22T00:00:00",
-        "caseNbr": "39392",
-        "unitNum": 1,
-        "quantity": 50
-      }
-    ]
-  }
-]
+[{
+	"appId": 100,
+	"orderNo": 4999,
+	"wareHouseId": "4999",
+	"priority": 1,
+	"orderStatus": "1",
+	"purchaseOrder": "232435454",
+	"receiveDate": "2018-09-22T16:15:18",
+	"createDate": "2017-04-22T09:15:18",
+	"modifyDate": "2017-04-22T09:15:18",
+	"items": [{
+		"productId": "47902",
+		"sku": "WAF1200",
+		"name": "Removable Cooking Plates - Accessory - Waffle",
+		"lotNo": "20180101",
+		"locationCode": "D8V231432543",
+		"productDate": "2016-04-21T00:00:00",
+		"expiredDate": "2022-04-22T00:00:00",
+		"area": 1,
+		"caseNbr": ["33", "333"],
+		"unitNum": 1,
+		"quantity": 100
+	}, {
+		"productId": "47903",
+		"sku": "WAF1201",
+		"name": "Removable Cooking Plates - Accessory - Pancake",
+		"lotNo": "20180101",
+		"locationCode": "D8V231432543",
+		"productDate": "2016-04-21T00:00:00",
+		"expiredDate": "2022-04-22T00:00:00",
+		"caseNbr": "39392",
+		"unitNum": 1,
+		"quantity": 50
+	}]
+}]
 ```
 **PK: (accountNo,requestNo)**
 
@@ -69,7 +67,7 @@ Lists all Replenishmenet bill that is in Liftians ERP system.
 
 **Method:** `GET`
 
-**End Point:** `http://{server url}/api/v1/receive?orderNo=552195`
+**End Point:** `http://{server url}/api/v1/receive?appId=100&orderNo=4999`
 
 
 **Response Code**
@@ -81,53 +79,59 @@ Lists all Replenishmenet bill that is in Liftians ERP system.
 
 ```json
 {
-    "msgId": null,
-    "result": "1",
-    "data": {
-        "id": 552195,
-        "orderNo": 552195,
-        "accountNo": 100,
-        "requestNo": null,
-        "priority": 1,
-        "orderStatus": null,
-	"purchaseOrder":"232435454",
-        "receiveDate": "2019-06-24 12:08:27",
-        "createDate": "2019-06-24 12:08:27",
-        "modifyDate": "2019-06-24 12:08:27",
-        "items": [
-            {
-                "itemId": "39126",
-                "orderId": "552195",
-                "sku": "3588US3-BK",
-                "name": "Orico 3588US3-BK 3.5 USB3.0 SATA HDD External Enclosure Black",
-                "lotNo": "552193",
-		"locationCode":"D8V231432543",
-                "productDate": null,
-                "expiredDate": null,
-                "caseNbr": ["33","333"],
-                "unitNum": 1,
-                "quantity": 1,
-                "processStatus": null,
-                "updateTime": null
-            },
-            {
-                "itemId": "40310",
-                "orderId": "552195",
-                "sku": "L95SS",
-                "name": "Orico Aluminium L95SS Laptop CD-ROM Bay Drive Bracket For 2.5 SATA Drive ",
-                "lotNo": "5522",
-                "productDate": null,
-		"locationCode":"D8V231432543",
-                "expiredDate": null,
-                "caseNbr": ["33","333"],
-                "unitNum": 1,
-                "quantity": 2,
-                "processStatus": null,
-                "updateTime": null
-            }
-        ]
-    },
-    "messageType": null
+    "id": 6,
+    "orderNo": 4999,
+    "appId": 100,
+    "wareHouseId": 4999,
+    "purchaseOrder": "232435454",
+    "priority": 1,
+    "stationId": 0,
+    "pallet": 0,
+    "orderStatus": "1",
+    "receiveDate": "2018-09-22 16:15:18",
+    "createDate": "2017-04-22 09:15:18",
+    "modifyDate": "2017-04-22 09:15:18",
+    "items": [
+        {
+            "itemId": 6,
+            "orderId": 4999,
+            "productId": null,
+            "sku": "WAF1200",
+            "name": "Removable Cooking Plates - Accessory - Waffle",
+            "lotNo": "20180101",
+            "locationCode": null,
+            "productDate": null,
+            "expiredDate": null,
+            "caseNbr": [
+                "33",
+                "333"
+            ],
+            "unitNum": 1,
+            "quantity": 100,
+            "area": 1,
+            "processStatus": null,
+            "updateTime": null
+        },
+        {
+            "itemId": 6,
+            "orderId": 4999,
+            "productId": null,
+            "sku": "WAF1201",
+            "name": "Removable Cooking Plates - Accessory - Pancake",
+            "lotNo": "20180101",
+            "locationCode": null,
+            "productDate": null,
+            "expiredDate": null,
+            "caseNbr": [
+                "39392"
+            ],
+            "unitNum": 1,
+            "quantity": 50,
+            "area": 0,
+            "processStatus": null,
+            "updateTime": null
+        }
+    ]
 }
    
 ```
@@ -141,7 +145,7 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 
 **Method:** `GET`
 
-**End Point:** `http://{server url}/api/v1/cancel/receive?orderNo=552195`
+**End Point:** `http://{server url}/api/v1/cancel/receive?appId=100&orderNo=4999`
 
 **Response Code**
 

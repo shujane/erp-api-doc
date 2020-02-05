@@ -207,31 +207,38 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 **Request Data:**
 ```json
 {
-	"accountNo": 100,
-	"requestNo": "552195",
-	"priority": 1,
-	"purchaseOrder":"232435454",
-	"receiveDate": "2019-06-24T12:08:27",
-	"createDate": "2019-06-24T12:08:27",
-	"modifyDate": "2019-06-24T12:08:27",
+	"appId": 100,
+	"orderNo": 4999,
+	"wareHouseId": "4999",
+	"priority": 2,
+	"orderStatus": "1",
+	"purchaseOrder": "232435454",
+	"receiveDate": "2018-09-22T16:15:18",
+	"createDate": "2017-04-22T09:15:18",
+	"modifyDate": "2017-04-22T09:15:18",
 	"items": [{
-		"itemId": "39126",
-		"sku": "3588US3-BK",
-		"name": "Orico 3588US3-BK 3.5 USB3.0 SATA HDD External Enclosure Black",
-		"lotNo": "552193",
-		"locationCode":"D8V231432543",
-		"caseNbr":["33","333"],
+		"productId": "47902",
+		"sku": "WAF12003",
+		"name": "Removable Cooking Plates - Accessory - Waffle",
+		"lotNo": "20180101",
+		"locationCode": "D8V231432543",
+		"productDate": "2016-04-21T00:00:00",
+		"expiredDate": "2022-04-22T00:00:00",
+		"area": 1,
+		"caseNbr": ["33", "333"],
 		"unitNum": 1,
-		"quantity": "1"
+		"quantity": 100
 	}, {
-		"itemId": "40310",
-		"sku": "L95SS",
-		"name": "Orico Aluminium L95SS Laptop CD-ROM Bay Drive Bracket For 2.5 SATA Drive ",
-		"lotNo": "5522",
-		"locationCode":"D8V231432543",
-		"caseNbr": ["33","333"],
+		"productId": "47903",
+		"sku": "WAF1202",
+		"name": "Removable Cooking Plates - Accessory - Pancake",
+		"lotNo": "20180101",
+		"locationCode": "D8V231432543",
+		"productDate": "2016-04-21T00:00:00",
+		"expiredDate": "2022-04-22T00:00:00",
+		"caseNbr": "39392",
 		"unitNum": 1,
-		"quantity": "2"
+		"quantity": 50
 	}]
 }
 

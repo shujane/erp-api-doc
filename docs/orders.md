@@ -20,7 +20,7 @@ This endpoint can be used to create or update multiple orders in one request.
 	"orderNo": 4999,
 	"wareHouseId": "4999",
 	"priority": 2,
-	"orderStatus": "awaiting_shipment",
+	"orderStatus": "1",
 	"orderDate": "2017-04-22 09:15:18",
 	"createDate": "2017-04-22 09:15:18",
 	"modifyDate": "2017-04-22 09:15:18",
@@ -76,46 +76,41 @@ Lists all orders that is in Liftians ERP system.
 
 ```json
 
- {
-    "msgId": null,
-    "result": "1",
-    "data": {
-        "id": 10,
-        "appId": 100,
-        "wareHouseId": 4999,
-        "orderNo": 4999,
-        "priority": 2,
-        "stationId": 0,
-        "orderStatus": "awaiting_shipment",
-        "orderDate": "2017-04-22 09:15:18",
-        "createDate": "2017-04-22 09:15:18",
-        "modifyDate": "2017-04-22 09:15:18",
-        "items": [
-            {
-                "itemId": 10,
-                "productId": 47902,
-                "orderId": 4999,
-                "sku": "WAF1200",
-                "name": "Removable Cooking Plates - Accessory - Waffle",
-                "quantity": 1,
-                "unitNum": 1,
-                "processStatus": null,
-                "updateTime": null
-            },
-            {
-                "itemId": 10,
-                "productId": 47903,
-                "orderId": 4999,
-                "sku": "WAF1201",
-                "name": "Removable Cooking Plates - Accessory - Pancake",
-                "quantity": 3,
-                "unitNum": 1,
-                "processStatus": null,
-                "updateTime": null
-            }
-        ]
-    },
-    "messageType": null
+{
+    "id": 10,
+    "appId": 100,
+    "wareHouseId": 4999,
+    "orderNo": 4999,
+    "priority": 2,
+    "stationId": 0,
+    "orderStatus": "1",
+    "orderDate": "2017-04-22 09:15:18",
+    "createDate": "2017-04-22 09:15:18",
+    "modifyDate": "2017-04-22 09:15:18",
+    "items": [
+        {
+            "itemId": 10,
+            "productId": 47902,
+            "orderId": 4999,
+            "sku": "WAF1200",
+            "name": "Removable Cooking Plates - Accessory - Waffle",
+            "quantity": 1,
+            "unitNum": 1,
+            "processStatus": null,
+            "updateTime": null
+        },
+        {
+            "itemId": 10,
+            "productId": 47903,
+            "orderId": 4999,
+            "sku": "WAF1201",
+            "name": "Removable Cooking Plates - Accessory - Pancake",
+            "quantity": 3,
+            "unitNum": 1,
+            "processStatus": null,
+            "updateTime": null
+        }
+    ]
 }
 
 ```
@@ -128,7 +123,7 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 
 **Method:** `GET`
 
-**End Point:** `http://{server url}/api/v1/cancel/delivery?orderNo=552195`
+**End Point:** `http://{server url}/api/v1/cancel/delivery?orderNo=4999&appId=100`
 
 **PK: (accountNo,requestNo)**
 
@@ -161,7 +156,7 @@ This endpoint can be used to resume order
 
 **Method:** `GET`
 
-**End Point:** `http://{server url}/api/v1/resume/delivery?orderNo=552195`
+**End Point:** `http://{server url}/api/v1/resume/delivery?orderNo=4999&appId=100`
 
 **PK: (accountNo,requestNo)**
 
@@ -194,32 +189,30 @@ NOTE: **The task can be canceled before being assigned to the AGV.
 **Request Data:**
 ```json
 {
-	"accountNo": 100,
-	"orderNo": "4113760",
-	"priority": 3,
-	"orderStatus": "0",
-	"orderDate": "2019-06-19T00:00:00",
-	"createDate": "2019-06-24T12:03:08",
-	"modifyDate": "2019-06-24T12:03:08",
+
+	"appId": 100,
+	"orderNo": 4999,
+	"wareHouseId": "4999",
+	"priority": 2,
+	"orderStatus": "1",
+	"orderDate": "2017-04-22 09:15:18",
+	"createDate": "2017-04-22 09:15:18",
+	"modifyDate": "2017-04-22 09:15:18",
 	"items": [{
-		"lineItemKey": "41011",
-		"sku": "ORC-BTA-402-BK",
-		"name": "Audio-Technica ATH-DSR9BT Wireless Over-Ear Headphones",
-		"unitNum": 1,
-		"quantity": "1"
-	}, {
-		"lineItemKey": "41015",
-		"sku": "HDWD120UZSVA",
-		"name": "Toshiba P300 2TB 7200RPM 64MB 3.5in SATA Hard Drive",
-		"unitNum": 1,
-		"quantity": "1"
-	}, {
-		"lineItemKey": "40310",
-		"sku": "BD717673",
-		"name": "Beyerdynamic Impacto Universal DAC\/ AMP for iPhone\/ Android",
-		"unitNum": 1,
-		"quantity": "1"
-	}]
+			"productId": "47902",
+			"sku": "WAF1200",
+			"name": "Removable Cooking Plates - Accessory - Waffle",
+			"unitNum": 1,
+			"quantity": 1
+		},
+		{
+			"productId": "47903",
+			"sku": "WAF1201",
+			"name": "Removable Cooking Plates - Accessory - Pancake",
+			"unitNum": 1,
+			"quantity": 3
+		}
+	]
 }
 ```
 

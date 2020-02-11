@@ -2,18 +2,23 @@
 
 |     Name       | Data Type     | Description |
 | ------------   | ------------- | ------------ |
-| `accountNo`    | number        | Unique number of the account ** accountNo Must be unique.** |
-| `accountName`  | string        | The name/alias of the account |
-| `active`       | boolean       | Specifies if the account is active or not |
-| `createDate`   | string        |  |
-| `modifyDate`   | string        |  |
+| `appId`        | number        | Customer Id, ** please contact Raffles ** |
+| `userId`       | number        | Unique number of the account ** accountNo Must be unique.** |
+| `userNumber`   | string        | The name/alias/userName of the account |
+| `nickName`     | string        | The nickName of the account |
+| `password`     | string        | The password of the account  |
+| `userCard`     | string        | Similar to username and password combination, can be used directly for login |
+| `stat`         | boolean       | 1:Available 0: Unavailable |
+| `createTime`   | long          | Timestamp demo:1581412741598 |
+| `updateTime`   | long          | Timestamp |
 
 # Model - Product
 
 |     Name       | Data Type     | Description |
 | ------------   | ------------- | ------------ |
 | `productId `   | number        | Product Unique Id for a given accountNo ** (accountNo,productId) Must be unique.** |
-| `accountNo`    | number        | Specifies which account this product belongs |
+| `appId`        | number        | Customer Id, ** please contact Raffles ** |
+| `wareHouseId   | number        | In which warehouse is the current item used |
 | `sku`          | string        | Stock keeping Unit. A user-defined value for a product to help identify the product. It is suggested that each product should contain a unique SKU. |
 | `name`         | string        | Product name |
 | `barcode`      | string        | Unique barcode to identify the product |
@@ -28,21 +33,21 @@
 | `createDate`   | string        |  |
 | `modifyDate`   | string        |  |
 
-# Model - Order
+# Model - Delivery
 
 |     Name       | Data Type     | Description |
 | ------------   | ------------- | ------------ |
-| `accountNo`    | number        | Specifies which account this order belongs |
+| `appId`        | number        | Customer Id, ** please contact Raffles **  |
 | `orderNo`      | string        | Specifies the order. ** (accountNo,orderNo) Must be unique.** |
-| `orderStatus`  | string        | The order's status. Possible values: `awaiting_payment`, `awaiting_shipment`, `shipped`, `on_hold`, `cancelled`. **All order push should be "awaiting_shipment"**   **Liftians will not change this value** |
+| `wareHouseId   | number        | In which warehouse is the current item used |
+| `orderStatus`  | string        | The order's status.   -1 = CANCEL, 0=UN_ASSIGN, 1=ASSIGN |
 | `priority`     | number        | Specifies the priority of the order. Options: 1 to 10. **The larger the number the higher priority it has. i.e. 10 is the highest, 1 is the lowest** |
 | `orderDate`    | string        |  |
 | `createDate`   | string        |  |
 | `modifyDate`   | string        |  |
 | `items`        | OrderItem     | Array of purchased items. |
-| `binInfo`      | BinInfo       | Array of bins that is the order used. |
 
-# Model - OrderItem
+# Model - DeliveryItem
 
 |     Name       | Data Type     | Description |
 | ------------   | ------------- | ------------ |

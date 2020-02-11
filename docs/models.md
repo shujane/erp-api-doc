@@ -18,7 +18,7 @@
 | ------------   | ------------- | ------------ |
 | `productId `   | number        | Product Unique Id|
 | `appId`        | number        | Customer Id, ** please contact Raffles ** |
-| `wareHouseId   | number        | In which warehouse is the current item used |
+| `wareHouseId`  | number        | In which warehouse is the current item used |
 | `sku`          | string        | Stock keeping Unit. A user-defined value for a product to help identify the product. It is suggested that each product should contain a unique SKU. |
 | `name`         | string        | Product name |
 | `barcode`      | string        | Unique barcode to identify the product |

@@ -16,10 +16,7 @@ Lists all Replenishmenet bill that is in Liftians ERP system.
 | `400`   | Invalid param |
 
 ```json
-{
-    "msgId": null,
-    "result": "1",
-    "data": [
+ [
         {
             "id": 11410,
             "locationBarCode": "D8V212AF1L",
@@ -86,8 +83,6 @@ Lists all Replenishmenet bill that is in Liftians ERP system.
             "updatetime": 1563007079000,
             "remander": null
         }
-    ],
-    "messageType": null
-}
+    ]
    
 ```

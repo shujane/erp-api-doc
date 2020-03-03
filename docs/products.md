@@ -29,6 +29,7 @@ NOTE: **Any duplicate appId,productId record will be replaced by the later added
 		"active": true,
 		"productImgUrl": "shujane updated image",
 		"packageImgUrl": "shujane packageImage",
+		"manageType": 1,
 		"createDate": "1580796651141",
 		"modifyDate": "1580796651141"
 	},
@@ -47,13 +48,18 @@ NOTE: **Any duplicate appId,productId record will be replaced by the later added
 		"active": true,
 		"productImgUrl": "shujane updated image",
 		"packageImgUrl": "shujane packageImage",
+		"manageType": 1,
 		"createDate": "1580796651141",
 		"modifyDate": "1580796651141"
 	}
 ]
 ```
+**manageType Code**
 
-**PK: (accountNo,productId)**
+|   Code  | Description   |
+| :-----: | ------------- |
+| 1  | One type of product is kept in only one locationBox |
+| 2  | One type of product kept in multiple locationBox |
 
 **Response Code**
 
@@ -88,6 +94,7 @@ NOTE: **Any duplicate appId,productId record will be replaced by the later added
         "active": true,
         "productImgUrl": "shujane updated image",
         "packageImgUrl": "shujane packageImage",
+	"manageType": 1,
         "createDate": 1580796651000,
         "modifyDate": 1580796651000
     },

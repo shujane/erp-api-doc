@@ -17,12 +17,13 @@ NOTE: **All items being pushed MUST also be in Liftians' ERP system**. Otherwise
 **Request Data:**
 ```json
 [{
-	"appId": 100,
-	"orderNo": 4999,
-	"wareHouseId": "4999",
-	"priority": 1,
-	"orderStatus": "1",
-	"purchaseOrder": "232435454",
+	"appId": 100,                        |int|NOT|
+	"orderNo": 4999,                     |int|NOT|
+	"customOrder": "944845530",          |String|NULL|
+	"wareHouseId": 4999,                 |int|NOT|
+	"priority": 1,                       |int|NOT|default =1|
+	"orderStatus": "1",                  |String|NOT|default = "1"|
+	"purchaseOrder": "232435454",  |String|NULL|
 	"receiveDate": "2018-09-22T16:15:18",
 	"createDate": "2017-04-22T09:15:18",
 	"modifyDate": "2017-04-22T09:15:18",
@@ -38,17 +39,6 @@ NOTE: **All items being pushed MUST also be in Liftians' ERP system**. Otherwise
 		"caseNbr": ["33", "333"],
 		"unitNum": 1,
 		"quantity": 100
-	}, {
-		"productId": "47903",
-		"sku": "WAF1201",
-		"name": "Removable Cooking Plates - Accessory - Pancake",
-		"lotNo": "20180101",
-		"locationCode": "D8V231432543",
-		"productDate": "2016-04-21T00:00:00",
-		"expiredDate": "2022-04-22T00:00:00",
-		"caseNbr": "39392",
-		"unitNum": 1,
-		"quantity": 50
 	}]
 }]
 ```

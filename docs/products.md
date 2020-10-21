@@ -58,33 +58,76 @@ NOTE: **Any duplicate appId,productId record will be replaced by the later added
 **Response Data:**
 ```json
 {
-    "msgId": null,
-    "result": "1",
-    "data": {
-        "productId": 47902,
-        "appId": 100,
-        "wareHouseId": 3,
-        "sku": "PR1000ELAA",
-        "name": "shujane testing 2",
-        "barcode": "1234567",
-        "length": 500,
-        "width": 400,
-        "height": 400,
-        "weight": 20,
-        "unitVolume": 31,
-        "active": true,
-        "productImgUrl": "shujane updated image",
-        "packageImgUrl": "shujane packageImage",
-	"manageType": 1,
-        "createDate": 1580796651000,
-        "modifyDate": 1580796651000
-    },
-    "messageType": null
+	productId: 52207,
+	appId: 100,
+	wareHouseId: 3,
+	sku: "SST-CS381",
+	name: "SilverStone CS381 Case Storage Series Black ATX Case No PSU",
+	barcode: "SST-CS381",
+	length: 1,
+	width: 1,
+	height: 1,
+	weight: 1,
+	unitVolume: 1,
+	active: true,
+	productImgUrl: null,
+	packageImgUrl: null,
+	manageType: null,
+	createDate: 1582271448000,
+	modifyDate: 1582271448000
 }
 ```
-**Response Code**
 
-|   Code  | Description   |
-| :-----: | ------------- |
-| `200`   | Success       |
-| `404`   | Product Not Found |
+# Get product -2
+
+**Method:** `GET`
+
+**End Point:** `http://{server url}/api/v1/product?appId=100&prePage=1&currentPage=100`
+
+**Response Data:**
+```json
+{
+	allPage: 258,
+	currentPage: 1,
+	perPage: 2,
+	items: [{
+			productId: 52068,
+			appId: 100,
+			wareHouseId: 3,
+			sku: "GS110TP-100AJS",
+			name: "Netgear GS110TP-100AJS 8-port PoE+ Gigabit Smart Managed Pro Switch w Cloud Management & 2 x SFP ports ProSAFE",
+			barcode: "GS110TP-100AJS",
+			length: 1,
+			width: 1,
+			height: 1,
+			weight: 1,
+			unitVolume: 1,
+			active: true,
+			productImgUrl: null,
+			packageImgUrl: null,
+			manageType: null,
+			createDate: 1582219003000,
+			modifyDate: 1582219003000
+		},
+		{
+			productId: 52207,
+			appId: 100,
+			wareHouseId: 3,
+			sku: "SST-CS381",
+			name: "SilverStone CS381 Case Storage Series Black ATX Case No PSU",
+			barcode: "SST-CS381",
+			length: 1,
+			width: 1,
+			height: 1,
+			weight: 1,
+			unitVolume: 1,
+			active: true,
+			productImgUrl: null,
+			packageImgUrl: null,
+			manageType: null,
+			createDate: 1582271448000,
+			modifyDate: 1582271448000
+		}
+	]
+}
+```
